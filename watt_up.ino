@@ -27,6 +27,6 @@ void loop() {
 }
 
 float get_randf(void){
-  return (float)random(0,1000) / 1000;
+  return (float)random(0,1000) / 10;
 }
 

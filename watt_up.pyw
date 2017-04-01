@@ -84,7 +84,7 @@ class SerialWorker(QtCore.QObject):
             line = self.port.readline()
             #line = self.port.read()
             # line is bytes
-            print("Received: {}".format(line))
+            #print("Received: {}".format(line))
             self.dataReady.emit(line)
             if self.use_file:
                 time.sleep(0.01)
@@ -149,7 +149,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         self.fig = Figure()
         self.ax = self.fig.add_subplot(111)
-        self.ax.plot(np.random.rand(5))
+        self.datas = []
+        self.lines = []
+        self.x_array = np.linspace(-300, 0, num=301, endpoint=True)
+        for i in range(5):
+            data = np.zeros(301)
+            self.datas.append(data)
+            line, = self.ax.plot(self.x_array, data)
+            self.lines.append(line)
         self.addmpl(self.fig)
         self.updatePlot()
 
@@ -198,6 +205,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             if len(values) == len(self.lcds):
                 for i in range(len(values)):
                     self.lcds[i].display(values[i])
+                    self.datas[i] = np.append(self.datas[i][1:], float(values[i]))
+                    self.lines[i].set_data(self.x_array, self.datas[i])
+                self.ax.relim()
+                self.ax.autoscale_view(True,True,True)
+                self.canvas.draw()
         except Exception as e:
             print(e)
 

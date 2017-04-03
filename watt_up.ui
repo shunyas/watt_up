@@ -61,7 +61,7 @@
              <string notr="true">color: rgb(255, 0, 0)</string>
             </property>
             <property name="text">
-             <string>Vin</string>
+             <string>Win</string>
             </property>
             <property name="textFormat">
              <enum>Qt::AutoText</enum>
@@ -80,7 +80,7 @@
              <string notr="true">color: rgb(255, 0, 0)</string>
             </property>
             <property name="text">
-             <string>v</string>
+             <string>w</string>
             </property>
            </widget>
           </item>
@@ -93,7 +93,7 @@
              <string notr="true">color: rgb(255, 0, 0)</string>
             </property>
             <property name="text">
-             <string>Vout</string>
+             <string>Wout</string>
             </property>
             <property name="textFormat">
              <enum>Qt::AutoText</enum>
@@ -112,7 +112,7 @@
              <string notr="true">color: rgb(255, 0, 0)</string>
             </property>
             <property name="text">
-             <string>v</string>
+             <string>w</string>
             </property>
            </widget>
           </item>

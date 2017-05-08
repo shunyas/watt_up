@@ -137,6 +137,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.pushButton_update.clicked.connect(self.populatePort)
         self.label_dummy.setVisible(False)
         self.lcdNumber_dummy.setVisible(False)
+        self.lcdNumber_temp.setVisible(False)
+        self.label_11.setVisible(False)
+        self.label_10.setVisible(False)
         #self.label_dummy2.setVisible(False)
         self.lcds = [self.lcdNumber_win,
                     self.lcdNumber_wout,

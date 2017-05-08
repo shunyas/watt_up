@@ -61,7 +61,7 @@
              <string notr="true">color: rgb(255, 0, 0)</string>
             </property>
             <property name="text">
-             <string>Win</string>
+             <string>Input Power</string>
             </property>
             <property name="textFormat">
              <enum>Qt::AutoText</enum>
@@ -93,7 +93,7 @@
              <string notr="true">color: rgb(255, 0, 0)</string>
             </property>
             <property name="text">
-             <string>Wout</string>
+             <string>Output Power</string>
             </property>
             <property name="textFormat">
              <enum>Qt::AutoText</enum>
@@ -125,7 +125,7 @@
              <string notr="true">color: rgb(255, 0, 0)</string>
             </property>
             <property name="text">
-             <string>efficiency</string>
+             <string>Efficiency</string>
             </property>
             <property name="textFormat">
              <enum>Qt::AutoText</enum>
